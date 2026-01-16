@@ -24,7 +24,7 @@ const ArticleDetail = () => {
 
                 setArticle(item);
 
-                const crawlRes = await fetch(`http://localhost:3000/api/crawl?url=${encodeURIComponent(item.link)}`);
+                const crawlRes = await fetch(`https://app-new-use-react.onrender.com/api/crawl?url=${encodeURIComponent(item.link)}`);
                 const crawlData = await crawlRes.json();
 
                 if (crawlData.success) {
@@ -98,7 +98,7 @@ const ArticleDetail = () => {
             .substring(0, 300);
 
         try {
-            const response = await fetch("http://localhost:3000/api/tts", {
+            const response = await fetch("https://app-new-use-react.onrender.com/api/tts", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text: textToRead })
