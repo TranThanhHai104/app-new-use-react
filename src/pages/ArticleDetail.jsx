@@ -190,8 +190,8 @@ const ArticleDetail = () => {
                         key={article?.link}
                         data-host="https://cusdis.com"
                         data-app-id="0268a669-39d4-47e7-b072-51aa66e56e6c"
-                        data-page-id={`${article.link}-${id}`}
-                        data-page-url="https://app-new-use-react-5ptocljs6-hais-projects-97b34a0b.vercel.app"
+                        data-page-id={article ? btoa(article.link).substring(0, 20) : ""}
+                        data-page-url={window.location.href}
                         data-page-title={article?.title}
                         data-lang="vi"
                     ></div>
